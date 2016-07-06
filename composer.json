@@ -1,13 +1,13 @@
 {
-    "name": "aacotroneo/laravel-saml2",
-    "description": "A Laravel package for Saml2 integration as a SP (service provider) based on OneLogin toolkit, which is much lightweight than simplesamlphp",
+    "name": "kn4ppster/laravel-saml2",
+    "description": "A Laravel 4.2 package for Saml2 integration as a SP (service provider) based on OneLogin toolkit, which is much lightweight than simplesamlphp",
     "keywords": ["laravel","saml", "saml2", "onelogin"],
-    "homepage": "https://github.com/aacotroneo/laravel-saml2",
+    "homepage": "https://github.com/Kn4ppster/laravel-saml2/tree/laravel-4.2",
     "license": "MIT",
     "authors": [
         {
-            "name": "aacotroneo",
-            "email": "aacotroneo@gmail.com"
+            "name": "kn4ppster",
+            "email": "kn4ppster@gmail.com"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
             "src/controllers"
         ],
         "psr-0": {
-            "Aacotroneo\\Saml2\\": "src/"
+            "Kn4ppster\\Saml2\\": "src/"
         }
     },
     "minimum-stability": "stable"
