@@ -1,5 +1,5 @@
 <?php
-namespace Aacotroneo\Saml2\Facades;
+namespace Kn4ppster\Saml2\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

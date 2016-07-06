@@ -1,6 +1,6 @@
 <?php
 
-namespace Aacotroneo\Saml2\Controllers;
+namespace Kn4ppster\Saml2\Controllers;
 
 use Config;
 use Event;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Aacotroneo\Saml2;
+namespace Kn4ppster\Saml2;
 
 use OneLogin_Saml2_Auth;
 use OneLogin_Saml2_Error;
