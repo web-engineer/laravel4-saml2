@@ -9,7 +9,7 @@ The aim of this library is to be as simple as possible. We won't mess with Larav
 To install Saml2 as a Composer package to be used with Laravel 4, simply add this to your composer.json:
 
 ```json
-"kn4ppster/laravel-saml2": "0.0.1"
+"kn4ppster/laravel4-saml2": "0.0.1"
 ```
 
 ..and run `composer update`.  Once it's installed, you can register the service provider in `app/config/app.php` in the `providers` array:
