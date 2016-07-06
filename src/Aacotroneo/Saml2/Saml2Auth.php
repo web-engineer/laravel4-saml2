@@ -7,6 +7,7 @@ use OneLogin_Saml2_Error;
 use OneLogin_Saml2_Utils;
 
 use Log;
+use Event;
 use Psr\Log\InvalidArgumentException;
 
 class Saml2Auth
@@ -96,20 +97,19 @@ class Saml2Auth
      * Process a Saml response (assertion consumer service)
      * @throws \Exception
      */
-    function sls()
+    function sls($retrieveParametersFromServer = false)
     {
         $auth = $this->auth;
 
         $keep_local_session = true; //we don't touch session here
-        $auth->processSLO($keep_local_session);
+        $session_callback = function () {
+            Event::fire('saml2.logoutRequestReceived');
+        };
+        $auth->processSLO($keep_local_session, null, $retrieveParametersFromServer, $session_callback);
 
         $errors = $auth->getErrors();
 
-        if (!empty($errors)) {
-            Log::error("Could not log out", $errors);
-            throw new \Exception("Could not log out");
-        }
-
+        return $errors;
     }
 
     /**

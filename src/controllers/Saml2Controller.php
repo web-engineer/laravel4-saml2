@@ -8,6 +8,7 @@ use Redirect;
 use Saml2Auth;
 use Controller;
 use Response;
+use Log;
 
 
 class Saml2Controller extends Controller
@@ -54,8 +55,11 @@ class Saml2Controller extends Controller
      */
     public function sls()
     {
-        Saml2Auth::sls();
-        Event::fire('saml2.logoutRequestReceived');
+        $errors = Saml2Auth::sls(Config::get('saml2::settings.retrieveParametersFromServer'));
+        if (!empty($errors)) {
+            Log::error("Could not log out", $errors);
+            throw new \Exception("Could not log out");
+        }
         return Redirect::to(Config::get('saml2::settings.logoutRoute')); //may be set a configurable default
     }
 
