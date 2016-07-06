@@ -36,7 +36,7 @@ class Saml2ServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app['saml2auth'] = $this->app->share(function ($app) {
-            $config = Config::get('saml2::saml_settings');
+            $config = Config::get('laravel4-saml2::saml_settings');
 
             $config['sp']['entityId'] = URL::route('saml_metadata');
 

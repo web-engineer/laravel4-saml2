@@ -2,7 +2,7 @@
     "name": "kn4ppster/laravel4-saml2",
     "description": "A Laravel 4.2 package for Saml2 integration as a SP (service provider) based on OneLogin toolkit, which is much lightweight than simplesamlphp",
     "keywords": ["laravel","saml", "saml2", "onelogin"],
-    "homepage": "https://github.com/Kn4ppster/laravel-saml2/tree/laravel-4.2",
+    "homepage": "https://github.com/Kn4ppster/laravel4-saml2/",
     "license": "MIT",
     "authors": [
         {

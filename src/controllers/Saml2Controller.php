@@ -44,7 +44,7 @@ class Saml2Controller extends Controller
             return Redirect::to($redirectUrl);
         }else {
 
-            return Redirect::to(Config::get('saml2::settings.loginRoute')); //may be set a configurable default
+            return Redirect::to(Config::get('laravel4-saml2::settings.loginRoute')); //may be set a configurable default
         }
     }
 
@@ -55,12 +55,12 @@ class Saml2Controller extends Controller
      */
     public function sls()
     {
-        $errors = Saml2Auth::sls(Config::get('saml2::settings.retrieveParametersFromServer'));
+        $errors = Saml2Auth::sls(Config::get('laravel4-saml2::settings.retrieveParametersFromServer'));
         if (!empty($errors)) {
             Log::error("Could not log out", $errors);
             throw new \Exception("Could not log out");
         }
-        return Redirect::to(Config::get('saml2::settings.logoutRoute')); //may be set a configurable default
+        return Redirect::to(Config::get('laravel4-saml2::settings.logoutRoute')); //may be set a configurable default
     }
 
     /**

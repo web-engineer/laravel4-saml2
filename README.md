@@ -20,7 +20,7 @@ To install Saml2 as a Composer package to be used with Laravel 4, simply add thi
 )
 ```
 
-Then publish the config file with `php artisan config:publish kn4ppster/laravel-saml2`. This will add the file `app/config/packages/kn4ppster/laravel-saml2/saml_settings.php`. This config is handled almost directly by  [one login](https://github.com/onelogin/php-saml) so you may get further references there, but will cover here what's really necessary.
+Then publish the config file with `php artisan config:publish kn4ppster/laravel4-saml2`. This will add the file `app/config/packages/kn4ppster/laravel4-saml2/saml_settings.php`. This config is handled almost directly by  [one login](https://github.com/onelogin/php-saml) so you may get further references there, but will cover here what's really necessary.
 
 ### Configuration
 

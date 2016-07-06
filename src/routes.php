@@ -1,7 +1,7 @@
 <?php
 
 
-Route::group(array('prefix' => Config::get('saml2::settings.routesPrefix')), function () {
+Route::group(array('prefix' => Config::get('laravel4-saml2::settings.routesPrefix')), function () {
 
     Route::get('/logout', array(
         'as' => 'saml_logout',
