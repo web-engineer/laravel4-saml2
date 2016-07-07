@@ -55,7 +55,7 @@ class Saml2Controller extends Controller
      */
     public function sls()
     {
-        $errors = Saml2Auth::sls(Config::get('laravel4-saml2::settings.retrieveParametersFromServer'));
+        $errors = Saml2Auth::sls(Config::get('laravel4-saml2::saml_settings.retrieveParametersFromServer'));
         if (!empty($errors)) {
             Log::error("Could not log out", $errors);
             throw new \Exception("Could not log out");

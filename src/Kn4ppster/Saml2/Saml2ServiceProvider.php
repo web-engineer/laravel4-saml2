@@ -23,7 +23,7 @@ class Saml2ServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('kn4ppster/saml2');
+        $this->package('kn4ppster/laravel4-saml2');
 
         include __DIR__ . '/../../routes.php';
     }
