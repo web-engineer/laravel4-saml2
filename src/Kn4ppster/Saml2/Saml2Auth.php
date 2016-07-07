@@ -101,11 +101,12 @@ class Saml2Auth
     {
         $auth = $this->auth;
 
-        $keep_local_session = true; //we don't touch session here
+        $keep_local_session = false;
+        $stay = true;
         $session_callback = function () {
             Event::fire('saml2.logoutRequestReceived');
         };
-        $auth->processSLO($keep_local_session, null, $retrieveParametersFromServer, $session_callback);
+        $auth->processSLO($keep_local_session, null, $retrieveParametersFromServer, $session_callback, $stay);
 
         $errors = $auth->getErrors();
 
