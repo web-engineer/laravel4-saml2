@@ -59,5 +59,15 @@ class Saml2User
             return $relayState;
         }
     }
+	
+	/**
+	 * retreive session index from response
+	 * 
+	 * @return string the session index
+	 */
+	function getSessionIndex() {
+		$auth = $this->auth;
+		return $auth->getSessionIndex();
+	}
 
 } 
