@@ -9,6 +9,7 @@ use OneLogin_Saml2_Utils;
 use Log;
 use Event;
 use Psr\Log\InvalidArgumentException;
+use Kn4ppster\Saml2\Exceptions\InvalidSamlResponseException;
 
 class Saml2Auth
 {
@@ -93,7 +94,7 @@ class Saml2Auth
 
         if (!empty($errors)) {
             Log::error("Invalid saml response", $errors);
-            throw new \Exception("The saml assertion is not valid, please check the logs.");
+            throw new InvalidSamlResponseException("The saml assertion is not valid, please check the logs.");
         }
 
         if (!$auth->isAuthenticated()) {
