@@ -16,7 +16,7 @@
 
 namespace Kn4ppster\Saml2\Exceptions;
 
-use Exception;
+use \Exception;
 
 class InvalidSamlResponseException extends Exception {
     protected $message = 'SamlResponse Invalid, please check logs.';
